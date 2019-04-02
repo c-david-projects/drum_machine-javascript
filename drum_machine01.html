@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Drum Machine</title>
+
+  <style>
+    div.button{
+  background-color:lightblue;
+  width:50px;
+  height: 80px;
+  margin:10px;
+  padding:10px;
+  border-radius:10px;
+  text-align: center;
+
+  display:inline-grid;
+  }
+
+  div.container {
+    text-align: center;
+
+  }
+
+  div.button.active{
+    background-color:cyan;  
+  }
+
+  </style>
+  <script>
+  
+    function playSample (sampleName){
+      var sample = document.getElementById(sampleName);
+      sample.play();
+    }
+
+  </script>
+  </head>
+
+  <body>
+   <audio src="sounds/808_kick.wav" autostart="false" id="808_kick"></audio>
+   <audio src="sounds/808_tom.wav" autostart="false" id="808_tom"></audio>
+   <audio src="sounds/808_clap.wav" autostart="false" id="808_clap"></audio>
+   <audio src="sounds/808_snare.wav" autostart="false" id="808_snare"></audio>
+   <audio src="sounds/808_hihatclosed.wav" autostart="false" id="808_hihatclosed"></audio>
+   <audio src="sounds/808_hihatopen.wav" autostart="false" id="808_hihatopen"></audio>
+
+   
+   <div class="container">
+      <div class="button" onclick="playSample('808_kick')">kick</div>
+      <div class="button" onclick="playSample('808_tom')">tom</div>
+      <div class="button" onclick="playSample('808_clap')">clap</div>
+      <div class="button" onclick="playSample('808_snare')">snare</div>
+      <div class="button" onclick="playSample('808_hihatclosed')">hi-hat closed</div>
+  </div>
+  </body>
+
+</html>
+
