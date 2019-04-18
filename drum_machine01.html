@@ -14,19 +14,88 @@
   padding:10px;
   border-radius:10px;
   text-align: center;
-
   display:inline-grid;
+  font-size: 15px;
   }
+/*
+ 
+/**/
 
-  div.container {
-    text-align: center;
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  background: #1b1b1b;
+  user-select: none;
+}
 
-  }
+.wrapper {
+  width: 500px;
+  height: 80px;
+  margin: 100px auto 0;
+  border-radius: 10px;
+  padding: 0.7%;
+}
 
-   div.button:active{
-    background-color:red;  
-  }
+.button {
+    color: #818181;
+    background-image: linear-gradient(top, #383838 0%, #1f1f1f 5%, #161616 100%);
+    background-image: -webkit-gradient( linear, left top, left bottom, from(#1f1f1f), to(#161616) );
+    /* border-radius: 7px; */
+    /* float: left; */
+    box-shadow: 0 0 1px 1px rgb(10, 10, 10);
+    cursor: pointer;
+    position: relative;
+    font: normal 20px arial;
+    text-transform: uppercase;
+    /* padding-left: 4%; */
+    /* padding-top: 5%; */
+    /* vertical-align: bottom; */
+    transition: color 0.3s ease;
+}
 
+.button:hover {
+  color: #9e9e9e;
+}
+
+.button:active {
+  box-shadow: 0 0 1px 1px rgb(10, 10, 10), inset 0 2px 2px 0px black;
+}
+
+.button:before {
+  position: absolute;
+  content: "";
+  right: 15px;
+  top: 10px;
+
+  width: 12px;
+  height: 12px;
+  background: #646464;
+  background-image: radial-gradient(top, #616161 0%, #616161 20%, #535353 60%);
+  border-radius: 50%;
+  box-shadow: 0 0 4px #1c1c17;
+  transition: all 0.3s ease;
+}
+
+.button:hover:before {
+  background: #ff4f4f;
+  box-shadow: 0 0 4px #1c1c17, 0 0 5px #ff4242;
+}
+
+.button:active:before {
+  box-shadow: 0 0 4px #1c1c17, inset 0 2px 2px 0px #cc0000;
+}
+
+/*.button:nth-child(1) {
+  width: 40%;
+  margin-right: 2%;
+}
+
+.button:nth-child(2) {
+  width: 58%;
+}
+*/
   </style>
   <script>
   
@@ -45,15 +114,24 @@
    <audio src="sounds/808_snare.wav" autostart="false" id="808_snare"></audio>
    <audio src="sounds/808_hihatclosed.wav" autostart="false" id="808_hihatclosed"></audio>
    <audio src="sounds/808_hihatopen.wav" autostart="false" id="808_hihatopen"></audio>
-
-   
-   <div class="container">
-      <div class="button" onclick="playSample('808_kick')">kick</div>
-      <div class="button" onclick="playSample('808_tom')">tom</div>
-      <div class="button" onclick="playSample('808_clap')">clap</div>
-      <div class="button" onclick="playSample('808_snare')">snare</div>
-      <div class="button" onclick="playSample('808_hihatclosed')">hi-hat closed</div>
-  </div>
+  <div class="wrapper">
+   <div class="button" onclick="playSample('808_kick')">&nbsp;
+   	<br>A<br>
+   	kick
+   </div>
+      <div class="button" onclick="playSample('808_tom')">
+      <br>S<br>		
+      tom</div>
+      <div class="button" onclick="playSample('808_clap')">
+       <br>D<br>		
+      clap</div>
+      <div class="button" onclick="playSample('808_snare')">
+        <br>F<br>		
+      snare</div>
+      <div class="button" onclick="playSample('808_hihatclosed')">
+      <br>G<br>	
+      hi-hat</div>
+</div>
   </body>
 
 </html>
