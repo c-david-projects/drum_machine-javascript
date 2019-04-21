@@ -123,34 +123,6 @@ input[type=radio]:checked ~ label{
   color: #0DFF92;
 }
 
-.alert {
-	box-sizing: border-box;
-	background-color: #0DFF92;
-	width: 100%;
-	position: relative; 
-	top: 0;
-	left: 0;
-	z-index: 300;
-	padding: 20px 40px;
-	color: #333;
-}
-
-.alert h2 {
-	font-size: 22px;
-	color: #232323;
-	margin-top: 0;
-}
-
-.alert p {
-	line-height: 1.6em;
-	font-size:18px;
-}
-
-.alert a {
-	color: #232323;
-	font-weight: bold;
-}
-
 
 *:before,
 *:after {
@@ -236,16 +208,46 @@ body {
       sample.play();
     }
 
+    window.onload = function (){
+
+
+    var audioOne = document.querySelector('#audio-1');
+    var audioTwo = document.querySelector('#audio-2');
+
+    var allAudios = document.querySelectorAll('audio');
+
+		function stopAllAudio(){
+			allAudios.forEach(function(audio){
+				audio.pause();
+			});
+		}
+
+		document.querySelector('#play-1').addEventListener('click', function(){
+			stopAllAudio();
+			audioOne.play();
+		})
+		document.querySelector('#play-2').addEventListener('click', function(){
+			stopAllAudio();
+			audioTwo.play();
+});
+
+}
+
   </script>
   </head>
 
   <body>
    <audio src="sounds/808_kick.wav" autostart="false" id="808_kick"></audio>
-   <audio src="sounds/808_tom.wav" autostart="false" id="808_tom"></audio>
+   <audio src="sounds/clapnoize.wav" autostart="false" id="808_tom"></audio>
    <audio src="sounds/808_clap.wav" autostart="false" id="808_clap"></audio>
    <audio src="sounds/808_snare.wav" autostart="false" id="808_snare"></audio>
+
+
    <audio src="sounds/808_hihatclosed.wav" autostart="false" id="808_hihatclosed"></audio>
    <audio src="sounds/808_hihatopen.wav" autostart="false" id="808_hihatopen"></audio>
+
+
+  <audio src="sounds/atmo1.wav" autostart="false" id="atmo1"></audio>
   <div class="wrapper">
    <div class="button" onclick="playSample('808_kick')">&nbsp;
    	<br>A<br>
@@ -257,28 +259,41 @@ body {
       <div class="button" onclick="playSample('808_clap')">
        <br>D<br>		
       clap</div>
-      <div class="button" onclick="playSample('808_snare')">
+      <div class="button" onclick="playSample('atmo1')">
         <br>F<br>		
       snare</div>
       <div class="button" onclick="playSample('808_hihatclosed')">
       <br>G<br>	
       hi-hat</div>
+
+      <audio id="audio-1"
+  src="sounds/atmo1.wav">
+<audio id="audio-2"
+  src="http://www.w3schools.com/html/horse.mp3">
+</audio>
+
+	<button id="play-1">
+		play audio 1
+	</button>
+	<button id="play-2">
+		play audio 2
+	</button>	
 </div>
 
 <div class="container">
 
 	<h2>Pick one atmosphere</h2>
 	
-  <ul>
+  <ul >
   <li>
-    <input type="radio" id="f-option" name="selector">
+    <input type="radio" id="f-option" name="selector" onchange="playAtmos('atmo1')">
     <label for="f-option">Atmosphere 1</label>
     
     <div class="check"></div>
   </li>
   
   <li>
-    <input type="radio" id="s-option" name="selector">
+    <input type="radio" id="s-option" name="selector" onchange="playSample('808_hihatclosed')">
     <label for="s-option">Atmosphere 2</label>
     
     <div class="check"><div class="inside"></div></div>
