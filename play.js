@@ -26,6 +26,8 @@
         document.addEventListener('keydown', (event) => {
             if (event.keyCode === 65 || event.keyCode === 83 || event.keyCode === 68 || event.keyCode === 74 || event.keyCode === 76) {
                 play(event.keyCode);
+
+                // button.classList.add(".btn-animation");
             }
         });
     });
