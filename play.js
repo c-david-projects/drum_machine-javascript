@@ -11,8 +11,6 @@
 
         const button = document.querySelectorAll('button');
 
-        document.getElementById('btn').classList.add("btn-active");
-
         for (let i= 0; i < button.length; i++) {
             button[i].addEventListener('click', () => {
 
