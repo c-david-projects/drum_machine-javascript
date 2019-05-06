@@ -1,4 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@font-face {
+  font-family: 'quadrangleregular';
+  src: url('quadrangle-webfont.woff2') format('woff2'),
+       url('quadrangle-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -45,7 +52,7 @@ table {
 }
 
 button.button-play{
-    width:50px;
+    width:70px;
     height: 80px;
     margin:10px;
     padding:10px;
@@ -57,29 +64,27 @@ button.button-play{
     }
 
      body, html{
-    height: 100%;
+    /* height: 100%; */
     background: #222222;
-      font-family: 'Lato', sans-serif;
+      font-family: 'quadrangleregular', sans-serif;
   } 
-  
-  h2 {
-      color: #AAAAAA;
-  }
-
+ 
   .p-t {
       padding-top: 25px;
   }
+
+  .grid-container{
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 37%;
+  }
  
   .wrapper {
-    width: 500px;
-    height: 80px;
-    margin: 100px auto 0;
-    border-radius: 10px;
     padding: 0.7%;
   }
   .button-play {
       color: #818181;
-      background-image: linear-gradient(top, #383838 0%, #1f1f1f 5%, #161616 100%);
+      background-image: linear-gradient(to top, #383838 0%, #1f1f1f 5%, #161616 100%);
       background-image: -webkit-gradient( linear, left top, left bottom, from(#1f1f1f), to(#161616) );
       box-shadow: 0 0 1px 1px rgb(10, 10, 10);
       cursor: pointer;
@@ -87,12 +92,13 @@ button.button-play{
       font: normal 20px arial;
       text-transform: uppercase;
       transition: color 0.3s ease;
-      font-family: 'Lato', sans-serif;
+      font-family: 'quadrangleregular', sans-serif;
+      color:#fff;
   }
-  .button-play:hover, .btn-animation {
+  .button-play:hover, .btn-animation:hover {
     color: #9e9e9e;
   }
-  .button-play:active, .btn-animation  {
+  .button-play:active, .btn-animation:active  {
     box-shadow: 0 0 1px 1px rgb(10, 10, 10), inset 0 2px 2px 0px black;
   }
   .button-play::before, .btn-animation::before {
@@ -103,16 +109,27 @@ button.button-play{
     width: 12px;
     height: 12px;
     background: #646464;
-    background-image: radial-gradient(top, #616161 0%, #616161 20%, #535353 60%);
+    background-image: radial-gradient(to top, #616161 0%, #616161 20%, #535353 60%);
     border-radius: 50%;
     box-shadow: 0 0 4px #1c1c17;
     transition: all 0.3s ease;
   }
-  .button-play:hover::before, .btn-animation:hover::before {
+  .button-play:hover::before, .btn-animation::before {
     background: #ff4f4f;
     box-shadow: 0 0 4px #1c1c17, 0 0 5px #ff4242;
   }
-  .button-play:active::before, .btn-animation:active::before {
+  .button-play:active::before, .btn-animation::before {
     box-shadow: 0 0 4px #1c1c17, inset 0 2px 2px 0px #cc0000;
   }
- 
+
+  .header {
+    background-color: #1c1c17;
+    padding: 20px 10px;
+    color:white;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .grid-container {
+     margin-left: 5%;
+    }
+  }

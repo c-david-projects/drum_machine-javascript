@@ -1,13 +1,14 @@
 
 
-        document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
 
         const sound_files = [];
-        sound_files[65] = "sounds/808_kick.wav";
-        sound_files[83] = "sounds/909_clap.wav";
-        sound_files[68] = "sounds/808_cowbell.wav";
-        sound_files[74] = "sounds/909_cymbal.wav";
-        sound_files[76] = "sounds/909_snare.wav";
+        sound_files[97] = "sounds/808_kick.wav";
+        sound_files[115] = "sounds/909_clap.wav";
+        sound_files[100] = "sounds/808_cowbell.wav";
+        sound_files[106] = "sounds/909_cymbal.wav";
+        sound_files[107] = "sounds/909_snare.wav";
+        sound_files[108] = "sounds/909_hihatopen.wav";
 
         const button = document.querySelectorAll('button');
 
@@ -23,11 +24,14 @@
            audio.play();
         }
 
-        document.addEventListener('keydown', (event) => {
-            if (event.keyCode === 65 || event.keyCode === 83 || event.keyCode === 68 || event.keyCode === 74 || event.keyCode === 76) {
+        document.addEventListener('keypress', (event) => {
+            if (event.keyCode === 97 || event.keyCode === 115 || event.keyCode === 100 || event.keyCode === 106 || event.keyCode === 107 || event.keyCode === 108) {
                 play(event.keyCode);
+                document.querySelector('button[data-sample="' + event.keyCode + '"]').classList.add("btn-animation");
 
-                // button.classList.add(".btn-animation");
+                setTimeout( () =>{
+                document.querySelector('button[data-sample="' + event.keyCode + '"]').classList.remove("btn-animation");    
+                },500);
             }
         });
     });
