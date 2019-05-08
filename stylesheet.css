@@ -89,7 +89,7 @@ button.button-play{
   }
 
   .extended-btn{
-    width: 200px!important;
+    width: 263px!important;
     padding-top:25px!important;
   }
 
@@ -168,3 +168,23 @@ button.button-play{
      margin-left: 5%;
     }
   }
+
+  @media only screen and (max-width: 400px) {
+    .extended-btn {
+     margin-left: 7%!important;
+    }
+  }
+
+  @media only screen and (min-width: 601px) {
+    .extended-btn {
+     margin-left: 41%!important;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .text-lyric {
+     margin-left: 7%!important;
+    }
+  }
+
+
