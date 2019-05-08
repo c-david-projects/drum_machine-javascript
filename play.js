@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var btn = document.getElementById("btn");
     var text = document.getElementById("text");
     function getRandomSentence() {
-        var index = Math.floor(Math.random() * (sentences.length));
+        var index = Math.floor(Math.random() * sentences.length);
         return sentences[index];
     }
     var sentences = [

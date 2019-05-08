@@ -169,7 +169,7 @@ button.button-play{
     }
   }
 
-  @media only screen and (max-width: 400px) {
+  @media only screen and (min-width: 100px) {
     .extended-btn {
      margin-left: 7%!important;
     }

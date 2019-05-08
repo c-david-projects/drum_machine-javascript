@@ -38,12 +38,12 @@
         let btn = document.getElementById("btn");
         const text = document.getElementById("text");
   
-        function getRandomSentence () {
-          let index= Math.floor(Math.random() * (sentences.length));
-          return sentences[index];
-      }
+        function getRandomSentence(){
+           let index = Math.floor(Math.random() * sentences.length);
+           return sentences[index];
+        }
   
-          let sentences= [
+        let sentences= [
           'so fat not even Dora can explore her',
           'so  fat I swerved to miss her and ran out of gas',
           'so smelly she put on Right Guard and it went left',
@@ -60,12 +60,12 @@
           'is like Bazooka Joe, 5 cents a blow',
           'is like an ATM, open 24/7',
           'is like a championship ring, everybody puts a finger in her'
-      ];
+        ];
   
-      btn.onclick = function () {
-          console.log(getRandomSentence());
-          text.textContent = getRandomSentence();
-      }
+        btn.onclick = function () {
+            console.log(getRandomSentence());
+            text.textContent = getRandomSentence();
+        }
 
     });
   
