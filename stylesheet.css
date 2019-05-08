@@ -7,6 +7,16 @@
 
 }
 
+
+@font-face {
+  font-family: 'prototyperegular';
+  src: url('prototype.woff2') format('woff2'),
+       url('prototype.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -70,6 +80,17 @@ button.button-play{
  
   .p-t {
       padding-top: 25px;
+  }
+
+  .text-lyric{
+    color:#00FF7F;
+    margin-left: 41%;
+    font-family: 'prototyperegular', sans-serif;
+  }
+
+  .extended-btn{
+    width: 200px!important;
+    padding-top:25px!important;
   }
 
   .grid-container{
