@@ -62,11 +62,11 @@ table {
 }
 
 button.button-play{
-    width:70px;
-    height: 80px;
-    margin:10px;
-    padding:10px;
-    border-radius:10px;
+    width:7.375em;
+    height: 8em;
+    margin:0.625em;
+    padding:1em;
+    border-radius:1.625em;
     text-align: center;
     display:inline-grid;
     font-size: 10px;
@@ -75,8 +75,50 @@ button.button-play{
 
      body, html{
     background: #222222;
-      font-family: 'quadrangleregular', sans-serif;
+    font-family: 'quadrangleregular', sans-serif;
+    color: #fff;
+	  background: linear-gradient(-45deg, rgb(29, 29, 28), rgb(56, 56, 56), rgb(71, 71, 71), rgb(49, 51, 51));
+	  background-size: 400% 400%;
+	  -webkit-animation: Gradient 25s ease infinite;
+	 -moz-animation: Gradient 25s ease infinite;
+	 animation: Gradient 25s ease infinite;
   } 
+
+  @-webkit-keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @-moz-keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
+  
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 50%
+    }
+    50% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 50%
+    }
+  }
  
   .p-t {
       padding-top: 25px;
@@ -185,6 +227,7 @@ button.button-play{
   @media only screen and (max-width: 600px) {
     .text-lyric {
      margin-left: 7%!important;
+     font-size: 16px;
     }
   }
 
