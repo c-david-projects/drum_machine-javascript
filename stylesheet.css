@@ -84,8 +84,9 @@ button.button-play{
 
   .text-lyric{
     color:#00FF7F;
-    margin-left: 41%;
     font-family: 'prototyperegular', sans-serif;
+    width: 300px;
+    margin-left: 41%
   }
 
   .extended-btn{
