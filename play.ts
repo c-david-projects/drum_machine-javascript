@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     const sound_files: string[] = [];
-    sound_files[97] = "sounds/909_kick.wav";
+    sound_files[97] = "sounds/808_kick.wav";
     sound_files[115] = "sounds/909_clap.wav";
     sound_files[100] = "sounds/808_cowbell.wav";
     sound_files[106] = "sounds/909_cymbal.wav";

@@ -153,7 +153,7 @@ button.button-play {
 	border-radius: 1.625em;
 	text-align: center;
 	display: inline-grid;
-	font-size: 10px;
+	font-size: 1.0rem;
 	outline: none;
 }
 
@@ -161,64 +161,27 @@ body,
 html {
 	background: #222222;
 	font-family: 'quadrangleregular', sans-serif;
-	color: #fff;
-	background: linear-gradient(-45deg, rgb(29, 29, 28), rgb(56, 56, 56), rgb(71, 71, 71), rgb(49, 51, 51));
-	background-size: 400% 400%;
-	-webkit-animation: Gradient 55s ease infinite;
-	-moz-animation: Gradient 55s ease infinite;
-	animation: Gradient 55s ease infinite;
 }
 
-@-webkit-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@-moz-keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
-}
-
-@keyframes Gradient {
-	0% {
-		background-position: 0% 50%
-	}
-	50% {
-		background-position: 100% 50%
-	}
-	100% {
-		background-position: 0% 50%
-	}
+html{
+  font-size:62.5%;
 }
 
 .p-t {
-	padding-top: 25px;
+	padding-top: 2.5rem;
 }
 
 .text-lyric {
 	color: #00FF7F;
 	font-family: 'prototyperegular', sans-serif;
-	width: 300px;
-	margin-left: 41%
+	width: 30.0rem;
+  margin-left: 41%;
+  font-size:1.7rem;
 }
 
 .extended-btn {
-	width: 263px!important;
-	padding-top: 25px!important;
+	width: 26.3rem!important;
+	padding-top: 2.5rem;
 }
 
 .grid-container {
@@ -235,10 +198,10 @@ html {
 	color: #818181;
 	background-image: linear-gradient(to top, #383838 0%, #1f1f1f 5%, #161616 100%);
 	background-image: -webkit-gradient( linear, left top, left bottom, from(#1f1f1f), to(#161616));
-	box-shadow: 0 0 1px 1px rgb(10, 10, 10);
+	box-shadow: 0 0 0.1rem 0.1rem rgb(10, 10, 10);
 	cursor: pointer;
 	position: relative;
-	font: normal 20px arial;
+	font: normal 2.0rem arial;
 	text-transform: uppercase;
 	transition: color 0.3s ease;
 	font-family: 'quadrangleregular', sans-serif;
@@ -252,39 +215,40 @@ html {
 
 .button-play:active,
 .btn-animation:active {
-	box-shadow: 0 0 1px 1px rgb(10, 10, 10), inset 0 2px 2px 0px black;
+	box-shadow: 0 0 0.1rem 0.1rem rgb(10, 10, 10), inset 0 0.2rem 0.2rem 0 black;
 }
 
 .button-play::before,
 .btn-animation::before {
 	position: absolute;
 	content: "";
-	right: 15px;
-	top: 10px;
-	width: 12px;
-	height: 12px;
+	right: 1.5rem;
+	top: 1.0rem;
+	width: 1.2rem;
+	height: 1.2rem;
 	background: #646464;
 	background-image: radial-gradient(to top, #616161 0%, #616161 20%, #535353 60%);
 	border-radius: 50%;
-	box-shadow: 0 0 4px #1c1c17;
+	box-shadow: 0 0 0.4rem #1c1c17;
 	transition: all 0.3s ease;
 }
 
 .button-play:hover::before,
 .btn-animation::before {
 	background: #ff4f4f;
-	box-shadow: 0 0 4px #1c1c17, 0 0 5px #ff4242;
+	box-shadow: 0 0 0.4rem #1c1c17, 0 0 0.5rem #ff4242;
 }
 
 .button-play:active::before,
 .btn-animation::before {
-	box-shadow: 0 0 4px #1c1c17, inset 0 2px 2px 0px #cc0000;
+	box-shadow: 0 0 0.4rem #1c1c17, inset 0 0.2rem 0.2rem 0.2rem #cc0000;
 }
 
 .header {
 	background-color: #1c1c17;
-	padding: 20px 10px;
-	color: white;
+	padding: 2.0rem 1.0rem;
+  color: white;
+  font-size:2rem;
 }
 
 .footer {
@@ -295,21 +259,26 @@ html {
 	background-color: #1c1c17;
 	color: white;
 	text-align: center;
-	height: 5%;
+  height: 5%;
+  font-size:2rem;
 }
 
 .footer-text {
-	margin-top: 10px;
+	margin-top: 1.0rem;
 }
 
 @media only screen and (max-width: 600px) {
 	.grid-container {
 		margin-left: 5%;
+  }
+  .text-lyric {
+		margin-left: 7%;
+		font-size: 1.6rem;
 	}
 }
 
 @media only screen and (min-width: 100px) {
-	.extended-btn {
+	.extended-btn-responsive {
 		margin-left: 7%!important;
 	}
 }
@@ -320,9 +289,7 @@ html {
 	}
 }
 
-@media only screen and (max-width: 600px) {
-	.text-lyric {
-		margin-left: 7%!important;
-		font-size: 16px;
-	}
-}
+
+/* set interval
+classe que muda a cor do texto */
+/* split */
