@@ -46,4 +46,14 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(getRandomSentence());
         text.textContent = getRandomSentence();
     };
+
+    var x = document.getElementById("text");
+    x.style.color = "blue";
+
+    function changeColor(){
+    x.style.color = x.style.color == "blue"?"yellow":"blue";
+}
+
+window.setInterval(changeColor,1000);
+
 });
