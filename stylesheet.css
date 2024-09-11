@@ -12,6 +12,14 @@
     font-style: normal;
 }
 
+
+@font-face {
+    font-family: 'teqto';
+    src: url('teqto-demo.woff2') format('woff2'), url('teqto-demo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html,
 body,
 div,
@@ -159,8 +167,10 @@ button.button-play {
 
 body,
 html {
-    background: #222222;
-    font-family: 'quadrangleregular', sans-serif;
+    /* background: #222222; */
+    background: rgb(36,35,35);
+    background: linear-gradient(90deg, rgba(36,35,35,1) 0%, rgba(110,103,103,1) 100%);
+    font-family: 'teqto', sans-serif;
 }
 
 html {
@@ -185,12 +195,19 @@ html {
 }
 
 .grid-container {
-    display: inline-grid;
     grid-template-columns: auto auto auto;
 }
 
 .wrapper {
     padding: 0.7%;
+}
+
+.header{
+background-color: #1c1c17;
+padding: 2.0rem 1.0rem;
+color: white;
+font-size: 2rem;
+text-align: center;
 }
 
 .button-play {
@@ -266,6 +283,32 @@ html {
     margin-top: 1.0rem;
 }
 
+.drum-main{
+    display: flex;
+    justify-content: center;
+    background-color: #201f1f;
+    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0px;
+    border: 2px solid #7dae7d;
+    border-radius: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 1em;
+    margin-top: 5em;
+    -webkit-box-shadow: 10px 6px 53px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 6px 53px -10px rgba(0,0,0,0.75);
+box-shadow: 10px 6px 53px -10px rgba(0,0,0,0.75);
+}
+
+.title-drum{
+    font-size: 6em;
+      color: white;
+      display: flex;
+      align-items: center;margin-right: 1em;
+}
+
 @media only screen and (max-width: 600px) {
     .grid-container {
         margin-left: 5%;
@@ -273,6 +316,9 @@ html {
     .text-lyric {
         margin-left: 7%;
         font-size: 1.6rem;
+    }
+    .title-drum{
+        display:none;
     }
 }
 

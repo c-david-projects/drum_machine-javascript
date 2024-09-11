@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Drum Machine</title>
     <link rel="stylesheet" type="text/css" href="./stylesheet.css">
     <script src="./play.js"></script>
@@ -10,10 +13,10 @@
 
 <body>
     <div class="header">
-        Drum Machine
+        Play some beats 
     </div>
-    <div style="display: flex;
-    justify-content: center">
+    <div class="drum-main">
+      <div  class="title-drum">Beats Machine</div>
         <div class="grid-container wrapper">
             <button type="button" class="button-play" data-sample="97">
       <span class="p-t">kick</span>
@@ -45,7 +48,9 @@
     <div id="text" class="text-lyric"><br>
     </div>
     <div class="footer">
-        <p class="footer-text ">César Martins Lima 2019</p>
+        <p class="footer-text ">Cesar Martins Lima <script>
+          document.write(new Date().getFullYear());
+       </script></p>
     </div>
 </body>
 
