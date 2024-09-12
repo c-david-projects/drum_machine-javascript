@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     var sound_files = [];
     sound_files[97] = "sounds/808_kick.wav";
     sound_files[115] = "sounds/909_clap.wav";
@@ -7,29 +7,33 @@ document.addEventListener("DOMContentLoaded", function () {
     sound_files[107] = "sounds/909_snare.wav";
     sound_files[108] = "sounds/909_hihatopen.wav";
     var button = document.querySelectorAll('button');
-    var _loop_1 = function (i) {
-        button[i].addEventListener('click', function () {
+    var _loop_1 = function(i) {
+        button[i].addEventListener('click', function() {
             play(button[i].dataset.sample);
         });
     };
     for (var i = 0; i < button.length; i++) {
         _loop_1(i);
     }
+
     function play(sample) {
         var audio = new Audio(sound_files[sample]);
         audio.play();
     }
-    document.addEventListener('keypress', function (event) {
-        if (event.keyCode === 97 || event.keyCode === 115 || event.keyCode === 100 || event.keyCode === 106 || event.keyCode === 107 || event.keyCode === 108) {
-            play(event.keyCode);
-            document.querySelector('button[data-sample="' + event.keyCode + '"]').classList.add("btn-animation");
-            setTimeout(function () {
-                document.querySelector('button[data-sample="' + event.keyCode + '"]').classList.remove("btn-animation");
-            }, 500);
-        }
-    });
+
+    //  Deprecated needs refactor
+    // document.addEventListener('keypress', function(event) {
+    //     if (event.keyCode === 97 || event.keyCode === 115 || event.keyCode === 100 || event.keyCode === 106 || event.keyCode === 107 || event.keyCode === 108) {
+    //         play(event.keyCode);
+    //         document.querySelector('button[data-sample="' + event.keyCode + '"]').classList.add("btn-animation");
+    //         setTimeout(function() {
+    //             document.querySelector('button[data-sample="' + event.keyCode + '"]').classList.remove("btn-animation");
+    //         }, 500);
+    //     }
+    // });
     var btn = document.getElementById("btn");
     var text = document.getElementById("text");
+
     function getRandomSentence() {
         var index = Math.floor(Math.random() * sentences.length);
         return sentences[index];
@@ -42,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         'Eu não quero pagar por aquilo que eu não fiz Não me fazem ver que a luta é pelo meu país Eu não quero pagar depois de tudo o que dei Não me fazem ver que fui eu que errei Não fui eu que gastei Mais do que era para mim Não fui eu que tirei Não fui eu que comi Não fui eu que comprei Não fui eu que escondi Quando estavam a olhar Não',
         'Como é bom estar contigo no sofá Neve lá fora e uma chávena de chá Eu vejo um filme, tu adormeces Conto-te as séries de que te esqueces E o meu resumo que é tão bom Hora e meia a ouvir o mesmo som E é por isso que eu sou apenas teu'
     ];
-    btn.onclick = function () {
+    btn.onclick = function() {
         console.log(getRandomSentence());
         text.textContent = getRandomSentence();
     };
